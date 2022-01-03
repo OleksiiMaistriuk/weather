@@ -1,1 +1,41 @@
-@import '~normalize.css'
+@import '~normalize.css';
+
+Html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  color: #080808;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+img,
+svg {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+textarea {
+  resize: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
