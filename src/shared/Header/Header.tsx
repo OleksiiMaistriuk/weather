@@ -10,6 +10,18 @@ export const Header = (props: Props) => {
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' },
   ];
+
+  const colorStyles = {
+    control: (styles: any) => ({
+      ...styles,
+      backgroundColor: ' rgba(71, 147, 255, 0.2);',
+      width: '194px',
+      height: '37px',
+      border: 'none',
+      borderRadius: '10px',
+      zIndex: 100,
+    }),
+  };
   return (
     <header className={s.header}>
       <div className={s.wraper}>
@@ -22,7 +34,7 @@ export const Header = (props: Props) => {
         <div className={s.change_theme}>
           <GlobalSvgSelector id="change-theme" />
         </div>
-        <Select options={options} />
+        <Select styles={colorStyles} options={options} />
       </div>
     </header>
   );
