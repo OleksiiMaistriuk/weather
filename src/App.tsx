@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
-import { Home } from './pages/Home/components/Home';
+import { Home } from './pages/Home/Home';
 import { MonthStatistic } from './pages/MonthStatistic/MonthStatistic';
 import { Header } from './shared/Header/Header';
 import './styles/index.scss';
