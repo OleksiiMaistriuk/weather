@@ -7,7 +7,7 @@ Html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 body {
   background-color: #f3f2f2;

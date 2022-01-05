@@ -17,9 +17,9 @@ export const ThisDay = (props: Props) => {
       <div className={s.bottom__block}>
         <ul className={s.bottom__block_wrapper}>
           <li className={s.this__time}>
-            <span>21:50</span>
+            <span>time :21:50</span>
           </li>
-          <li className={s.this__city}>New York</li>
+          <li className={s.this__city}>city:New York</li>
         </ul>
       </div>
     </section>
