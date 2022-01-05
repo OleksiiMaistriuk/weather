@@ -1,0 +1,82 @@
+@import '../../styles/variables.scss';
+.popup {
+  z-index: 1000;
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 350px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px;
+  max-width: 700px;
+  background: $lite-background;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.sun__cloud_img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 50%;
+}
+
+.blur {
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.close {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  cursor: pointer;
+  svg {
+    transition: 0.7s;
+  }
+  &:hover {
+    svg {
+      transform: rotate(360deg);
+    }
+  }
+}
+.day_info_item {
+  position: relative;
+  right: 40%;
+}
+
+.day {
+  margin-bottom: 12px;
+  .day_temp {
+    font-weight: 500;
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: $primary-color;
+  }
+  .day_name {
+    font-size: 25px;
+    line-height: 30x;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .img {
+    svg {
+      width: 53px;
+      height: 53px;
+    }
+    margin-bottom: 12px;
+  }
+  .day_time,
+  .day_city {
+    font-size: 15px;
+    color: $base-color;
+  }
+}
