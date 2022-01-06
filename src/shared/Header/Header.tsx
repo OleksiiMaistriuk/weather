@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector';
 import Select from 'react-select';
 import s from './Header.module.scss';
+import { useTheme } from '../../hooks/useTheme';
 
 interface Props {}
+
 export const Header = (props: Props) => {
+  const theme = useTheme();
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'strawberry', label: 'Strawberry' },
@@ -14,7 +17,8 @@ export const Header = (props: Props) => {
   const colorStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor: 0 ? '#4f4f4f' : ' rgba(71, 147, 255, 0.2);',
+      backgroundColor:
+        theme.theme === 'dark' ? '#4f4f4f' : ' rgba(71, 147, 255, 0.2);',
       width: '194px',
       height: '37px',
       border: 'none',
@@ -23,13 +27,12 @@ export const Header = (props: Props) => {
     }),
     singleValue: (styles: any) => ({
       ...styles,
-      color: 0 ? '#fff ' : '#000',
+      color: theme.theme === 'dark' ? '#fff ' : '#000',
     }),
   };
-  const [theme, setTheme] = useState('light');
 
   function changeTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    theme.changeTheme(theme.theme === 'light' ? 'dark' : 'light');
   }
 
   useEffect(() => {
@@ -44,10 +47,10 @@ export const Header = (props: Props) => {
     components.forEach(component => {
       root.style.setProperty(
         `--${component}-default`,
-        `var(--${component}-${theme})`,
+        `var(--${component}-${theme.theme})`,
       );
     });
-  }, [theme]);
+  }, [theme.theme]);
   return (
     <header className={s.header}>
       <div className={s.wraper}>
