@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector';
 import Select from 'react-select';
 import s from './Header.module.scss';
@@ -30,13 +30,24 @@ export const Header = (props: Props) => {
 
   function changeTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light');
-
-    const root = document.querySelector(':root') as HTMLElement;
-    root.style.setProperty(
-      '--body-background-default',
-      `var(--body-background-${theme})`,
-    );
   }
+
+  useEffect(() => {
+    const root = document.querySelector(':root') as HTMLElement;
+    const components = [
+      'body-background',
+      'components-background',
+      'card-background',
+      'card-shadow',
+      'text-color',
+    ];
+    components.forEach(component => {
+      root.style.setProperty(
+        `--${component}-default`,
+        `var(--${component}-${theme})`,
+      );
+    });
+  }, [theme]);
   return (
     <header className={s.header}>
       <div className={s.wraper}>

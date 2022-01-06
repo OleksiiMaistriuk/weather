@@ -35,10 +35,10 @@ export const ThisDayInfo = (props: Props) => {
   return (
     <section className={s.this__day_info}>
       <div className={s.this__day_info_items}>
+        <img className={s.cloud__img} src={cloud} alt="cloud" />
         {items.map((item: Item) => (
           <ThisDayItem key={item.icon_id} item={item} />
         ))}
-        <img className={s.cloud__img} src={cloud} alt="cloud" />
       </div>
     </section>
   );
