@@ -12,15 +12,15 @@ export const Card = ({ days }: Props) => {
   const { day, day_info, icon_id, temp_day, temp_night, info } = days;
 
   return (
-    <div className={s.card}>
-      <div className={s.day}>{day}</div>
-      <div className={s.day__info}>{day_info}</div>
-      <div className={s.img}>
+    <ul className={s.card}>
+      <li className={s.day}>{day}</li>
+      <li className={s.day__info}>{day_info}</li>
+      <li className={s.img}>
         <GlobalSvgSelector id={icon_id} />
-      </div>
-      <div className={s.temp__day}>{temp_day}</div>
-      <div className={s.temp__night}>{temp_night}</div>
-      <div className={s.info}>{info}</div>
-    </div>
+      </li>
+      <li className={s.temp__day}>{temp_day}</li>
+      <li className={s.temp__night}>{temp_night}</li>
+      <li className={s.info}>{info}</li>
+    </ul>
   );
 };

@@ -4,7 +4,7 @@
   padding: 40px;
   width: 100%;
   max-width: 750px;
-  background: $light-background;
+  background: var(#{--components-background-default});
   box-shadow: $box-shadow;
   border-radius: $border-radius;
 }
@@ -38,7 +38,7 @@
     color: $base-color;
   }
   .indicator__value {
-    color: $light-color;
+    color: var(#{--text-color-default});
   }
 }
 .cloud__img {
