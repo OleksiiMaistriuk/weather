@@ -3,6 +3,7 @@ import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector';
 import Select from 'react-select';
 import s from './Header.module.scss';
 import { useTheme } from '../../hooks/useTheme';
+import { Theme } from '../../context/ThemeContext';
 
 interface Props {}
 
@@ -18,7 +19,7 @@ export const Header = (props: Props) => {
     control: (styles: any) => ({
       ...styles,
       backgroundColor:
-        theme.theme === 'dark' ? '#4f4f4f' : ' rgba(71, 147, 255, 0.2);',
+        theme.theme === Theme.DARK ? '#4f4f4f' : ' rgba(71, 147, 255, 0.2);',
       width: '194px',
       height: '37px',
       border: 'none',
@@ -27,12 +28,12 @@ export const Header = (props: Props) => {
     }),
     singleValue: (styles: any) => ({
       ...styles,
-      color: theme.theme === 'dark' ? '#fff ' : '#000',
+      color: theme.theme === Theme.DARK ? '#fff ' : '#000',
     }),
   };
 
   function changeTheme() {
-    theme.changeTheme(theme.theme === 'light' ? 'dark' : 'light');
+    theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   }
 
   return (
