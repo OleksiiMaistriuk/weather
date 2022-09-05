@@ -14,7 +14,17 @@ type Response = {
 };
 
 const initialState: CurrentWeather = {
-  weather: { main: { temp: 0 } },
+  weather: {
+    name: '',
+    main: {
+      temp: 0,
+      feels_like: 0,
+      humidity: 0,
+      pressure: 0,
+      temp_max: 0,
+      temp_min: 0,
+    },
+  },
   isLoading: false,
   response: {
     status: 0,
@@ -22,14 +32,14 @@ const initialState: CurrentWeather = {
   },
 };
 
-export const curentWeatherSlice = createSlice({
+export const currentWeatherSlice = createSlice({
   name: 'current_weather',
   initialState,
   reducers: {
     fetchCurrentWeather(state) {
       state.isLoading = true;
     },
-    fetchCurrentWeatherSucces(
+    fetchCurrentWeatherSuccess(
       state,
       action: PayloadAction<AxiosResponse<Weather>>,
     ) {
@@ -53,4 +63,4 @@ export const curentWeatherSlice = createSlice({
   },
 });
 
-export default curentWeatherSlice.reducer;
+export default currentWeatherSlice.reducer;

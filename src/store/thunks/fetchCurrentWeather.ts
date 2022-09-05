@@ -1,15 +1,16 @@
 import { WeatherService } from '../../services/WeatherService';
-import { curentWeatherSlice } from '../slices/curentWeatherSlice';
+import { currentWeatherSlice } from '../slices/currentWeatherSlice';
 import { AppDispatch } from '../store';
 
 export const fetchCurrentWeather =
   (payload: string) => async (dispatch: AppDispatch) => {
     try {
-      dispatch(curentWeatherSlice.actions.fetchCurrentWeather());
+      dispatch(currentWeatherSlice.actions.fetchCurrentWeather());
       const res = await WeatherService.getCurrentWeather(payload);
+      console.log(res)
       if (res.status === 200) {
-        dispatch(curentWeatherSlice.actions.fetchCurrentWeatherSucces(res));
-      } else dispatch(curentWeatherSlice.actions.fetchCurrentWeatherError(res));
+        dispatch(currentWeatherSlice.actions.fetchCurrentWeatherSuccess(res));
+      } else dispatch(currentWeatherSlice.actions.fetchCurrentWeatherError(res));
     } catch (error) {
       console.log(error);
     }

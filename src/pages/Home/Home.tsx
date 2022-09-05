@@ -13,7 +13,7 @@ export const Home = (props: Props) => {
   const dispatch = useCustomDispatch();
 
   const { weather } = useCustomSelector(
-    state => state.curentWeatherSliceReduser,
+    state => state.currentWeatherSliceReduser,
   );
   useEffect(() => {
     dispatch(fetchCurrentWeather('paris'));
