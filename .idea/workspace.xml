@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16644c39-ebf6-4fc6-be01-1a2743720e36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/curentWeatherSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/thunks/fetchCurrentWeather.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/thunks/fetchCurrentWeather.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662405168768</updated>
-      <workItem from="1662405172074" duration="1616000" />
+      <workItem from="1662405172074" duration="2418000" />
     </task>
     <servers />
   </component>

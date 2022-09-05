@@ -2,6 +2,7 @@ import React from 'react';
 import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector';
 import { Weather } from '../../../../store/types/types';
 import s from './ThisDay.module.scss';
+
 interface Props {
   weather: Weather;
 }
@@ -22,7 +23,7 @@ export const ThisDay = ({ weather }: Props) => {
           <li className={s.this__time}>
             <span>time :21:50</span>
           </li>
-          <li className={s.this__city}>city:New York</li>
+          <li className={s.this__city}>city:{weather.name}</li>
         </ul>
       </div>
     </section>

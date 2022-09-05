@@ -16,7 +16,7 @@ export const Home = (props: Props) => {
     state => state.currentWeatherSliceReduser,
   );
   useEffect(() => {
-    dispatch(fetchCurrentWeather('paris'));
+    dispatch(fetchCurrentWeather('london'));
   }, []);
   return (
     <div className={s.home}>
