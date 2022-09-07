@@ -3,3 +3,23 @@
   justify-content: space-between;
   margin-bottom: 50px;
 }
+
+.input {
+  border-radius: 4px;
+  padding: 12px;
+  height: 48px;
+  margin: 24px;
+  appearance: none;
+
+  border: none;
+  outline: none;
+  background-color: rgba(191, 198, 217, 0.54);
+  font-size: 16px;
+  color: #4793ff;
+  box-shadow: 5px 10px 20px #e1dada inset
+
+}
+
+.input:focus {
+  background-color: rgba(191, 198, 217, 1);
+}

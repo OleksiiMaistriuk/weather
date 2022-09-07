@@ -8,11 +8,45 @@ interface Props {
 }
 
 export const ThisDay = ({ weather }: Props) => {
+  const { temp, feels_like, humidity, pressure, temp_max, temp_min } =
+    weather.main;
+
+  const dateBuilder = (date: Date) => {
+    const months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+    const days = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+    const day = days[date.getDay()];
+    const currentDate = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `${day} ${month} ${year} ${currentDate}`;
+  };
+
   return (
     <section className={s.this__day}>
       <div className={s.top__block}>
         <ul className={s.top__block_wrapper}>
-          <li className={s.this__temp}>{Math.floor(weather.main.temp)}°</li>
+          <li className={s.this__temp}>{Math.floor(temp)}°</li>
           <li className={s.this__day_name}>today</li>
         </ul>
 
@@ -21,9 +55,9 @@ export const ThisDay = ({ weather }: Props) => {
       <div className={s.bottom__block}>
         <ul className={s.bottom__block_wrapper}>
           <li className={s.this__time}>
-            <span>time :21:50</span>
+            <span>{dateBuilder(new Date())}</span>
           </li>
-          <li className={s.this__city}>city:{weather.name}</li>
+          <li className={s.this__city}>location:{weather.name}</li>
         </ul>
       </div>
     </section>
