@@ -10,6 +10,7 @@ interface Props {
 export const ThisDay = ({ weather }: Props) => {
   const { temp, feels_like, humidity, pressure, temp_max, temp_min } =
     weather.main;
+  const { country } = weather.sys;
 
   const dateBuilder = (date: Date) => {
     const months = [
@@ -57,7 +58,9 @@ export const ThisDay = ({ weather }: Props) => {
           <li className={s.this__time}>
             <span>{dateBuilder(new Date())}</span>
           </li>
-          <li className={s.this__city}>location: {weather.name}</li>
+          <li className={s.this__city}>
+            location: {weather.name},{country}
+          </li>
         </ul>
       </div>
     </section>

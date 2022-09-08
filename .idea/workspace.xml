@@ -8,6 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
       <workItem from="1662405172074" duration="2757000" />
       <workItem from="1662570961069" duration="5046000" />
       <workItem from="1662576960138" duration="1836000" />
-      <workItem from="1662656732032" duration="3865000" />
+      <workItem from="1662656732032" duration="6643000" />
     </task>
     <servers />
   </component>

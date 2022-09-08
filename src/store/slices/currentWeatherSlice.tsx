@@ -24,6 +24,7 @@ const initialState: CurrentWeather = {
       temp_max: 0,
       temp_min: 0,
     },
+    sys: { country: '' },
   },
   isLoading: false,
   response: {

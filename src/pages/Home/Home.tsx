@@ -18,7 +18,7 @@ export const Home = (props: Props) => {
   const { weather } = useCustomSelector(selectCurrentWeatherData);
 
   const searchWeather = (e: any) => {
-    if (e.key === 'Enter' && query.length !== 0) {
+    if (e.key === 'Enter' && query) {
       dispatch(fetchCurrentWeather(`${query}`));
       setQuery('');
     }
@@ -30,9 +30,7 @@ export const Home = (props: Props) => {
         className={s.input}
         type="text"
         placeholder="Search..."
-        onChange={e =>
-          e.target.value.length > 0 ? setQuery(e.target.value) : false
-        }
+        onChange={e => (e! ? setQuery(e.target.value) : '')}
         value={query}
         onKeyPress={searchWeather}
       />
