@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
 import { fetchCurrentWeather } from '../../store/thunks/fetchCurrentWeather';
@@ -11,19 +11,31 @@ import { selectCurrentWeatherData } from '../../store/selectors';
 interface Props {}
 
 export const Home = (props: Props) => {
-  const [city, setCity] = useState('London');
+  const [query, setQuery] = useState('');
 
   const dispatch = useCustomDispatch();
 
   const { weather } = useCustomSelector(selectCurrentWeatherData);
 
-  useEffect(() => {
-    dispatch(fetchCurrentWeather(`${city}`));
-  }, []);
+  const searchWeather = (e: any) => {
+    if (e.key === 'Enter' && query.length !== 0) {
+      dispatch(fetchCurrentWeather(`${query}`));
+      setQuery('');
+    }
+  };
 
   return (
     <div className={s.home}>
-      <input className={s.input} type="text" placeholder="Search..." />
+      <input
+        className={s.input}
+        type="text"
+        placeholder="Search..."
+        onChange={e =>
+          e.target.value.length > 0 ? setQuery(e.target.value) : false
+        }
+        value={query}
+        onKeyPress={searchWeather}
+      />
       <div className={s.wrapper}>
         <ThisDay weather={weather} />
         <ThisDayInfo />

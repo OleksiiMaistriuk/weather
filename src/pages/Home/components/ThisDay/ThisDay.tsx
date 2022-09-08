@@ -57,7 +57,7 @@ export const ThisDay = ({ weather }: Props) => {
           <li className={s.this__time}>
             <span>{dateBuilder(new Date())}</span>
           </li>
-          <li className={s.this__city}>location:{weather.name}</li>
+          <li className={s.this__city}>location: {weather.name}</li>
         </ul>
       </div>
     </section>
