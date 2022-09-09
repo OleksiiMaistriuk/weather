@@ -11,8 +11,7 @@ import { selectCurrentWeatherData } from '../../store/selectors';
 interface Props {}
 
 export const Home = (props: Props) => {
-  const [query, setQuery] = useState('');
-
+  const [query, setQuery] = useState('London');
   const dispatch = useCustomDispatch();
 
   const { weather } = useCustomSelector(selectCurrentWeatherData);
@@ -29,14 +28,14 @@ export const Home = (props: Props) => {
       <input
         className={s.input}
         type="text"
-        placeholder="Search..."
-        onChange={e => (e! ? setQuery(e.target.value) : '')}
+        placeholder="Enter Location"
+        onChange={e => (e! ? setQuery(e.target.value) : null)}
         value={query}
         onKeyPress={searchWeather}
       />
       <div className={s.wrapper}>
         <ThisDay weather={weather} />
-        <ThisDayInfo />
+        <ThisDayInfo weather={weather} />
       </div>
       <Days />
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { IndicatorSvgSelector } from '../../../../assets/icons/indicators/IndicatorSvgSelector';
 import { Item } from './ThisDayInfo';
 import s from './ThisDayInfo.module.scss';
+
 interface Props {
   item: Item;
 }

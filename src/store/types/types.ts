@@ -1,4 +1,12 @@
 export type Weather = {
+  weather: [
+    {
+      description: String;
+      icon: String;
+      id: number;
+      main: String;
+    },
+  ];
   name: String;
   main: {
     temp: number;
@@ -9,7 +17,10 @@ export type Weather = {
     temp_min: number;
   };
   sys: { country: String };
-
+  wind: {
+    deg: number;
+    speed: number;
+  };
   // sunrise: 1662614647;
   // sunset: 1662661966;
 };

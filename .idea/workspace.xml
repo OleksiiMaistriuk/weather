@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types/types.ts" afterDir="false" />
     </list>
@@ -70,6 +71,8 @@
       <workItem from="1662570961069" duration="5046000" />
       <workItem from="1662576960138" duration="1836000" />
       <workItem from="1662656732032" duration="6643000" />
+      <workItem from="1662733255551" duration="598000" />
+      <workItem from="1662734519514" duration="7922000" />
     </task>
     <servers />
   </component>
@@ -86,5 +89,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/assets/icons/indicators/IndicatorSvgSelector.tsx</url>
+          <line>82</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

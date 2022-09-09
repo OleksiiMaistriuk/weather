@@ -8,8 +8,7 @@ interface Props {
 }
 
 export const ThisDay = ({ weather }: Props) => {
-  const { temp, feels_like, humidity, pressure, temp_max, temp_min } =
-    weather.main;
+  const { temp } = weather.main;
   const { country } = weather.sys;
 
   const dateBuilder = (date: Date) => {
@@ -40,14 +39,14 @@ export const ThisDay = ({ weather }: Props) => {
     const currentDate = date.getDate();
     const month = months[date.getMonth()];
     const year = date.getFullYear();
-    return `${day} ${month} ${year} ${currentDate}`;
+    return `${day} ${currentDate} of ${month}  ${year} `;
   };
 
   return (
     <section className={s.this__day}>
       <div className={s.top__block}>
         <ul className={s.top__block_wrapper}>
-          <li className={s.this__temp}>{Math.floor(temp)}°</li>
+          <li className={s.this__temp}>{temp.toFixed()}°</li>
           <li className={s.this__day_name}>today</li>
         </ul>
 
@@ -57,6 +56,11 @@ export const ThisDay = ({ weather }: Props) => {
         <ul className={s.bottom__block_wrapper}>
           <li className={s.this__time}>
             <span>{dateBuilder(new Date())}</span>
+          </li>
+          <li className={s.this__time}>
+            <span>
+              {weather.weather[0].main}: {weather.weather[0].description}
+            </span>
           </li>
           <li className={s.this__city}>
             location: {weather.name},{country}

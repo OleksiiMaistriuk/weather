@@ -15,6 +15,14 @@ type Response = {
 
 const initialState: CurrentWeather = {
   weather: {
+    weather: [
+      {
+        description: '',
+        icon: '',
+        id: 0,
+        main: '',
+      },
+    ],
     name: '',
     main: {
       temp: 0,
@@ -25,6 +33,7 @@ const initialState: CurrentWeather = {
       temp_min: 0,
     },
     sys: { country: '' },
+    wind: { deg: 0, speed: 0 },
   },
   isLoading: false,
   response: {
