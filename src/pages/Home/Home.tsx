@@ -7,6 +7,7 @@ import { ThisDay } from './components/ThisDay/ThisDay';
 import { ThisDayInfo } from './components/ThisDayInfo/ThisDayInfo';
 import s from './Home.module.scss';
 import { selectCurrentWeatherData } from '../../store/selectors';
+import { Search } from './components/Search/Search';
 
 interface Props {}
 
@@ -25,6 +26,7 @@ export const Home = (props: Props) => {
 
   return (
     <div className={s.home}>
+      <Search />
       <input
         className={s.input}
         type="text"

@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16644c39-ebf6-4fc6-be01-1a2743720e36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/Home/components/Search/Search.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home/components/Search/Search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/axios/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDay/ThisDay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/ThisDayInfo/ThisDayItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/currentWeatherSlice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +74,7 @@
       <workItem from="1662656732032" duration="6643000" />
       <workItem from="1662733255551" duration="598000" />
       <workItem from="1662734519514" duration="7922000" />
+      <workItem from="1662879935801" duration="9546000" />
     </task>
     <servers />
   </component>
@@ -96,7 +98,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/assets/icons/indicators/IndicatorSvgSelector.tsx</url>
           <line>82</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
