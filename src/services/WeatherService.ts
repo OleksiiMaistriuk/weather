@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import api from '../axios';
+import api from '../axios/weatherApi';
 import { Weather } from '../store/types/types';
 
 export class WeatherService {
