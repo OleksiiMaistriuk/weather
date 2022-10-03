@@ -37,8 +37,8 @@ export const Search = (onSearchChange: Props) => {
       <AsyncPaginate
         placeholder="Search the city"
         debounceTimeout={600}
-        value={search}
-        onChange={handleChange}
+        value={search} // @ts-ignore
+        onChange={handleChange} // @ts-ignore
         loadOptions={loadOptions}
       />
     </div>
