@@ -1,5 +1,5 @@
-import { AsyncPaginate } from 'react-select-async-paginate';
 import { useState } from 'react';
+import { AsyncPaginate } from 'react-select-async-paginate';
 import { options } from '../../../../axios/geoApiOptions';
 
 interface Props {}
@@ -38,7 +38,10 @@ export const Search = (onSearchChange: Props) => {
         placeholder="Search the city"
         debounceTimeout={600}
         value={search}
+        // @ts-ignore
         onChange={handleChange}
+        // @ts-ignore
+
         loadOptions={loadOptions}
       />
     </div>
