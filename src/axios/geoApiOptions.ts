@@ -1,4 +1,4 @@
-export const options = {
+export const apiOptions: RequestInit = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Key': '13f7b1cd2dmsh805857b48dc7bbep17a950jsn7532e4c61cb4',

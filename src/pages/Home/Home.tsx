@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
+import { selectCurrentWeatherData } from '../../store/selectors';
 import { fetchCurrentWeather } from '../../store/thunks/fetchCurrentWeather';
 import { Days } from './components/Days/Days';
+import { Search } from './components/Search/Search';
 import { ThisDay } from './components/ThisDay/ThisDay';
 import { ThisDayInfo } from './components/ThisDayInfo/ThisDayInfo';
 import s from './Home.module.scss';
-import { selectCurrentWeatherData } from '../../store/selectors';
-import { Search } from './components/Search/Search';
 
-interface Props {}
-
-export const Home = (props: Props) => {
+export const Home = () => {
   const [query, setQuery] = useState('London');
   const dispatch = useCustomDispatch();
 
@@ -26,7 +24,7 @@ export const Home = (props: Props) => {
 
   return (
     <div className={s.home}>
-      <Search />
+      <Search  />
       <input
         className={s.input}
         type="text"

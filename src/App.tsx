@@ -11,6 +11,7 @@ function App() {
       {/* <Popup /> */}
       <div className="container">
         <Header />
+        {/* <Home /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/month-statistic" element={<MonthStatistic />} />

@@ -7,5 +7,4 @@ api.interceptors.request.use(config => {
     config.url + '&units=metric' + '&appid=' + process.env.WEATHER_APP_API_KEY;
   return config;
 });
-
 export default api;
