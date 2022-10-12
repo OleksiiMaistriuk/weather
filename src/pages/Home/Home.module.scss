@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .input {
@@ -16,8 +17,7 @@
   background-color: rgba(191, 198, 217, 0.54);
   font-size: 16px;
   color: #4793ff;
-  box-shadow: 5px 10px 20px #e1dada inset
-
+  box-shadow: 5px 10px 20px #e1dada inset;
 }
 
 .input:focus {

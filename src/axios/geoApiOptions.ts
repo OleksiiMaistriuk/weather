@@ -1,7 +1,8 @@
-export const options = {
+import { GEO_APP_API_KEY } from '../.tokens';
+export const apiOptions: RequestInit = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '13f7b1cd2dmsh805857b48dc7bbep17a950jsn7532e4c61cb4',
+    'X-RapidAPI-Key': GEO_APP_API_KEY,
     'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
   },
 };

@@ -1,9 +1,13 @@
 import { AxiosResponse } from 'axios';
 import api from '../axios/weatherApi';
-import { Weather } from '../store/types/types';
+import { ICoordinates, Weather } from '../store/types/types';
 
 export class WeatherService {
-  static getCurrentWeather(city: string): Promise<AxiosResponse<Weather>> {
-    return api.get<Weather>(`/weather?q=${city}`);
+  static getCurrentWeather(
+    coordinates: ICoordinates,
+  ): Promise<AxiosResponse<Weather>> {
+    return api.get<Weather>(
+      `/weather?lat=${coordinates?.latitude}&lon=${coordinates?.longitude}`,
+    );
   }
 }

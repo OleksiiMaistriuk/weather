@@ -1,44 +1,35 @@
+import { useEffect, useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
-import { useState } from 'react';
-import { options } from '../../../../axios/geoApiOptions';
+import loadOptions from './loadOptions';
 
-interface Props {}
+import { useCustomDispatch } from 'hooks/store';
+import { fetchCurrentWeather } from 'store/thunks/fetchCurrentWeather';
+import { ICoordinates, IMyOption } from 'store/types/types';
 
-type MyOption = { label: string; value: number };
+export const Search = () => {
+  const [searchData, onSearchData] = useState<IMyOption | null>();
+  const [coordinates, setCoordinates] = useState<ICoordinates | undefined>();
 
-export const Search = (onSearchChange: Props) => {
-  const [search, setSearch] = useState('');
+  const dispatch = useCustomDispatch();
 
-  const handleChange = (optionData: string) => {
-    setSearch(optionData);
-  };
-
-  const loadOptions = (inputValue: string) => {
-    return fetch(
-      `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${inputValue}`,
-      options,
-    )
-      .then(response => response.json())
-      .then(response => {
-        return {
-          options: response.data.map((city: any) => {
-            return {
-              value: `${city.latitude} ${city.longitude}`,
-              label: `${city.name} ${city.countryCode}`,
-            };
-          }),
-        };
-      })
-      .catch(err => console.error(err));
-  };
+  useEffect(() => {
+    if (coordinates) {
+      dispatch(fetchCurrentWeather(coordinates));
+      console.log('coordinates', coordinates);
+    }
+    if (searchData) {
+      setCoordinates(searchData.value);
+      console.log('searchData.value', searchData.value);
+    }
+  }, [searchData, coordinates, dispatch]);
 
   return (
     <div>
       <AsyncPaginate
         placeholder="Search the city"
         debounceTimeout={600}
-        value={search}
-        onChange={handleChange}
+        value={searchData}
+        onChange={onSearchData}
         loadOptions={loadOptions}
       />
     </div>

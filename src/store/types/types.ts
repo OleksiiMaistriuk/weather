@@ -23,39 +23,18 @@ export type Weather = {
   };
 };
 
-export type Geo = {
-  next: string;
-  // count: number;
-  // results: [
-  //   {
-  //     mappings: [
-  //       {
-  //         elements: [
-  //           {
-  //             values: [string];
-  //             attribute: string;
-  //           },
-  //         ];
-  //         name: string;
-  //         description: string;
-  //       },
-  //     ];
-  //     tenant_ref: string;
-  //     name: string;
-  //     description: string;
-  //     files: [
-  //       {
-  //         vendor: string;
-  //         name: string;
-  //         index: number;
-  //         file_ref: string;
-  //         enabled: true;
-  //       },
-  //     ];
-  //     uuid: string;
-  //     is_federated: true;
-  //     url: string;
-  //     _last_modified: string;
-  //   },
-  // ];
-};
+export interface ICoordinates {
+  latitude: number;
+  longitude: number;
+}
+export interface IMyOption {
+  label: string;
+  value?: ICoordinates;
+}
+
+export interface ICity {
+  name: string;
+  country: string;
+  latitude: number;
+  longitude: number;
+}
