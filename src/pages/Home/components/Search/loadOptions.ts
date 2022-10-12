@@ -1,3 +1,4 @@
+import { GEO_APP_API_URL } from '.tokens';
 import { apiOptions } from 'axios/geoApiOptions';
 import { GroupBase } from 'react-select';
 import { LoadOptions } from 'react-select-async-paginate';
@@ -9,7 +10,7 @@ const loadOptions: LoadOptions<
   any
 > = async inputText => {
   return await fetch(
-    `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000&namePrefix=${inputText}`,
+    `${GEO_APP_API_URL}cities?minPopulation=1000&namePrefix=${inputText}`,
     apiOptions,
   )
     .then(response => response.json())
