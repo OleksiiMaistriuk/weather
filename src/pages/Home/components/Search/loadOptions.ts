@@ -1,15 +1,11 @@
+import { apiOptions } from 'axios/geoApiOptions';
 import { GroupBase } from 'react-select';
 import { LoadOptions } from 'react-select-async-paginate';
-import { apiOptions } from '../../../../axios/geoApiOptions';
-interface ICity {
-  name: string;
-  country: string;
-  latitude: string;
-  longitude: string;
-}
+import { ICity, IMyOption } from 'store/types/types';
+
 const loadOptions: LoadOptions<
-  string,
-  GroupBase<string>,
+  IMyOption,
+  GroupBase<IMyOption>,
   any
 > = async inputText => {
   return await fetch(
