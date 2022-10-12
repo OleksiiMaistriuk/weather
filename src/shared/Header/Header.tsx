@@ -1,8 +1,7 @@
 import { GlobalSvgSelector } from '../../assets/icons/global/GlobalSvgSelector';
-import Select from 'react-select';
-import s from './Header.module.scss';
-import { useTheme } from '../../hooks/useTheme';
 import { Theme } from '../../context/ThemeContext';
+import { useTheme } from '../../hooks/useTheme';
+import s from './Header.module.scss';
 
 interface Props {}
 
@@ -41,17 +40,17 @@ export const Header = (props: Props) => {
         <div className={s.logo}>
           <GlobalSvgSelector id="header-logo" />
         </div>
-        <h1 className={s.title}>Reacr Weather</h1>
+        <h1 className={s.title}>Weather</h1>
       </div>
       <div className={s.wraper}>
         <div className={s.change_theme} onClick={changeTheme}>
           <GlobalSvgSelector id="change-theme" />
         </div>
-        <Select
+        {/* <Select
           defaultValue={options[0]}
           styles={colorStyles}
           options={options}
-        />
+        /> */}
       </div>
     </header>
   );
